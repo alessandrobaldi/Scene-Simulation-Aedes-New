@@ -1,0 +1,59 @@
+package br.ufes.inf.lprm.scene.examples.fever;
+
+import br.ufes.inf.lprm.scene.examples.fever.entities.Person;
+import br.ufes.inf.lprm.scene.examples.fever.entities.Temperature;
+import br.ufes.inf.lprm.scene.examples.fever.situations.NoFever;
+
+import br.ufes.inf.lprm.scene.model.Situation;
+import br.ufes.inf.lprm.situation.bindings.*;
+import br.ufes.inf.lprm.situation.model.Participation;
+import br.ufes.inf.lprm.situation.model.SituationType;
+import br.ufes.inf.lprm.scene.util.SituationHelper;
+
+declare Fever extends Situation
+    febrile: Person @part @key
+    temp: Temperature @snapshot
+end
+
+rule "FeverSituation"
+@role(situation)
+@type(Fever)
+    when
+    	febrile: Person(temp: temperature, temperature.value > 37)
+    then
+    	SituationHelper.situationDetected(drools);
+end
+
+rule "NoFeverSituation"
+@role(situation)
+@type(situations.NoFever)
+    when
+    	f1: Person(temperature.value <= 37)
+    then
+    	SituationHelper.situationDetected(drools);
+end
+
+/*rule "FeverAfterNoFever"
+    when
+    	no: NoFever()
+    	fever: Fever(this after no)
+    then
+    	System.out.println("fever after no fever!");
+    	if (!no.isActive()) {
+    	    System.out.println("NO FEVER:" + no.getActivation().getTimestamp() + " - " + no.getDeactivation().getTimestamp());
+    	} else {
+    	    System.out.println("NO FEVER:" + no.getActivation().getTimestamp() + " - ???");
+    	}
+        System.out.println("FEVER:" + fever.getActivation().getTimestamp() + " - ???");
+end*/
+
+/*rule "NoFeverBeforeFever"
+    when
+    	fever: Fever()
+    	no: NoFever(this before fever)
+    then
+    	System.out.println("no fever before fever!");
+        System.out.println("NO FEVER:" + no.getActivation().getTimestamp() + " - " + no.isActive());
+        System.out.println("FEVER:" + fever.getActivation().getTimestamp() + " - ???");
+
+end*/

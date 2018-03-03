@@ -1,0 +1,114 @@
+00:06:31,120  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+00:06:31,124 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+00:06:31,131  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+00:06:31,132  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+00:06:31,132  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+00:06:31,141 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+00:06:31,144  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+00:06:32,853 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:xce6b03eax0a90x4d8exaa44x9c0a100fe2a6
+Rule Compilation error : [Rule name='mosquitoAptFly']
+	br/ufes/inf/lprm/scene/examples/aedes/Rule_mosquitoAptFly952706852.java (7:565) : SituationHelper cannot be resolved
+
+
+02:20:32,582  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/META-INF/kmodule.xml
+02:20:32,585 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:20:33,022  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:20:33,030  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/pom.xml
+02:20:33,038 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:0.10.1
+02:20:33,043  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:0.10.1,file=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes]
+02:20:33,043  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+02:20:33,045 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:33,052  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:33,055  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:33,055  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+02:20:33,067 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+02:20:33,068  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+02:20:34,802 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:xed6b86bfx5900x4aebx8c25x503eee653c48
+Rule Compilation error : [Rule name='mosquitoAptFly']
+	br/ufes/inf/lprm/scene/examples/aedes/Rule_mosquitoAptFly340310710.java (7:584) : Syntax error, insert ")" to complete Expression
+
+
+02:20:50,470  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/META-INF/kmodule.xml
+02:20:50,475 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:20:50,913  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:20:50,921  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/pom.xml
+02:20:50,926 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:0.10.1
+02:20:50,930  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:0.10.1,file=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes]
+02:20:50,930  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+02:20:50,932 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:50,936  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:50,937  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:20:50,937  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+02:20:50,948 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+02:20:50,949  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+02:20:52,809 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:xa4121df9xd20ex40c7xb744x0eb9d1de7705
+Rule Compilation error : [Rule name='mosquitoAptFly']
+	br/ufes/inf/lprm/scene/examples/aedes/Rule_mosquitoAptFly340293412.java (7:595) : Syntax error, insert ";" to complete Statement
+
+
+02:20:59,454  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/META-INF/kmodule.xml
+02:20:59,460 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:21:00,038  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:21:00,044  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/pom.xml
+02:21:00,050 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:0.10.1
+02:21:00,056  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:0.10.1,file=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes]
+02:21:00,057  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+02:21:00,058 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:00,067  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:00,069  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:00,070  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+02:21:00,080 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+02:21:00,081  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+02:21:01,486 ERROR AbstractKieModule:250 - Unable to build KieBaseModel:x89b52108xa5d6x47fbxb72ex6e6109a0f261
+Rule Compilation error : [Rule name='mosquitoAptFly']
+	br/ufes/inf/lprm/scene/examples/aedes/Rule_mosquitoAptFly340293412.java (7:595) : Syntax error, insert ";" to complete Statement
+
+
+02:21:13,061  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/META-INF/kmodule.xml
+02:21:13,064 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:21:13,439  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:21:13,448  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/pom.xml
+02:21:13,453 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:0.10.1
+02:21:13,458  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:0.10.1,file=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes]
+02:21:13,458  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+02:21:13,460 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:13,468  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:13,469  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:21:13,469  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+02:21:13,478 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+02:21:13,479  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+02:21:15,420 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/
+02:21:15,461  INFO Reflections:229 - Reflections took 38 ms to scan 1 urls, producing 2 keys and 2 values 
+02:21:15,493 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/
+02:21:15,506  INFO Reflections:229 - Reflections took 9 ms to scan 1 urls, producing 0 keys and 0 values 
+02:21:15,511 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_UNTIL_HALT
+02:21:15,515 DEBUG DefaultAgenda:1397 - State was FIRING_UNTIL_HALT is now INACTIVE_ON_FIRING_UNTIL_HALT
+02:21:15,521 DEBUG DefaultAgenda:1397 - State was INACTIVE_ON_FIRING_UNTIL_HALT is now FIRING_UNTIL_HALT
+02:21:15,525 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.entities.Scenary@363f6148
+02:21:15,643 DEBUG DefaultAgenda:1397 - State was FIRING_UNTIL_HALT is now INACTIVE_ON_FIRING_UNTIL_HALT
+02:22:09,486  INFO ClasspathKieProject:131 - Found kmodule: file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/META-INF/kmodule.xml
+02:22:09,491 DEBUG ClasspathKieProject:400 - KieModule URL type=file url=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:22:10,009  WARN ClasspathKieProject:289 - Unable to find pom.properties in /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes
+02:22:10,019  INFO ClasspathKieProject:331 - Recursed up folders, found and used pom.xml /Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/pom.xml
+02:22:10,023 DEBUG ClasspathKieProject:118 - Discovered classpath module br.ufes.inf.lprm:scene-examples:0.10.1
+02:22:10,030  INFO KieRepositoryImpl:119 - KieModule was added: FileKieModule[releaseId=br.ufes.inf.lprm:scene-examples:0.10.1,file=/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes]
+02:22:10,030  INFO ClasspathKieProject:131 - Found kmodule: jar:file:/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar!/META-INF/kmodule.xml
+02:22:10,033 DEBUG ClasspathKieProject:400 - KieModule URL type=jar url=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:22:10,044  WARN ClasspathKieProject:261 - Unable to find pom.properties in /Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:22:10,045  WARN ClasspathKieProject:231 - Unable to load pom.properties from/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar
+02:22:10,045  WARN ClasspathKieProject:185 - Cannot find maven pom properties for this project. Using the container's default ReleaseId
+02:22:10,057 DEBUG ClasspathKieProject:118 - Discovered classpath module org.default:artifact:1.0.0-SNAPSHOT
+02:22:10,059  INFO KieRepositoryImpl:119 - KieModule was added: ZipKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT,file=/Users/alessandro/.m2/repository/br/ufes/inf/lprm/scene-core/0.10.7/scene-core-0.10.7.jar]
+02:22:11,980 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/
+02:22:12,017  INFO Reflections:229 - Reflections took 32 ms to scan 1 urls, producing 2 keys and 2 values 
+02:22:12,031 DEBUG Reflections:186 - going to scan these urls:
+file:/Users/alessandro/NetBeansProjects/SimulationSCENE/target/classes/
+02:22:12,043  INFO Reflections:229 - Reflections took 7 ms to scan 1 urls, producing 0 keys and 0 values 
+02:22:12,046 DEBUG DefaultAgenda:1397 - State was INACTIVE is now FIRING_UNTIL_HALT
+02:22:12,049 DEBUG DefaultAgenda:1397 - State was FIRING_UNTIL_HALT is now INACTIVE_ON_FIRING_UNTIL_HALT
+02:22:12,055 DEBUG DefaultAgenda:1397 - State was INACTIVE_ON_FIRING_UNTIL_HALT is now FIRING_UNTIL_HALT
+02:22:12,058 DEBUG SCENELogger:24 - INSERT - br.ufes.inf.lprm.scene.examples.aedes.entities.Scenary@363f6148
+02:22:12,167 DEBUG DefaultAgenda:1397 - State was FIRING_UNTIL_HALT is now INACTIVE_ON_FIRING_UNTIL_HALT

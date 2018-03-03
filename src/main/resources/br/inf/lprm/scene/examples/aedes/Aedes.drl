@@ -1,0 +1,34 @@
+package br.ufes.inf.lprm.scene.examples.aedes;
+
+import br.ufes.inf.lprm.scene.base.*;
+import br.ufes.inf.lprm.scene.examples.aedes.entities.*;
+import br.ufes.inf.lprm.scene.examples.aedes.situations.*;
+
+import java.lang.Math;
+
+global java.util.List list;
+/*Mosquito Apto a Voar
+Condição de ativação: Mosquito não deve ter voado durante o dia. Desativa: Após mosquito voar.
+Mosquito Apto a botar
+Condição de ativação: Após desativação do “apto a voar”. Desativa: Após mosquito botar.
+Ovos chocando
+Condição de ativação: Após desativação do “apto a botar” Desativa: após 20 dias ou até agente combater.
+Mosquito nasce
+Condição de ativação: Após desativação do “ovos chocando” Desativa: Após mosquito nascer.
+Agente sendo chamado
+Condição de ativação: Com a condição “ovos chocando” Desativa: Após 3 dias.
+Agente atuando
+Condição de ativação: Com a desativação de “agente sendo chamado” Desativa: Após combater 5 casas aleatoriamente.
+Chovendo
+Condição de ativação: 15 dias após última execução / início da simulação Desativa: Após chover*/
+
+
+
+rule "mosquitoAptFly"
+when
+        Scenary( $houses: scenary )
+        $house: House() from $houses
+        $mosq: Mosquito(controlfly==false) from $house.getMosquitos()
+then
+    	System.out.println("Pode voar");
+end

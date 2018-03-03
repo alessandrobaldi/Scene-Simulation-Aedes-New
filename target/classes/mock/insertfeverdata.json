@@ -1,0 +1,10 @@
+{
+  "type": "insert",
+  "Person": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "temperature": 37
+    }
+  ]
+}
