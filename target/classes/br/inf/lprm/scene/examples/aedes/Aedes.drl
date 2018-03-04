@@ -1,8 +1,13 @@
 package br.ufes.inf.lprm.scene.examples.aedes;
 
-import br.ufes.inf.lprm.scene.base.*;
 import br.ufes.inf.lprm.scene.examples.aedes.entities.*;
-import br.ufes.inf.lprm.scene.examples.aedes.situations.*;
+
+import br.ufes.inf.lprm.scene.model.Situation;
+import br.ufes.inf.lprm.situation.bindings.*;
+import br.ufes.inf.lprm.situation.model.Participation;
+import br.ufes.inf.lprm.situation.model.SituationType;
+import br.ufes.inf.lprm.scene.util.SituationHelper;
+
 
 import java.lang.Math;
 
@@ -23,12 +28,27 @@ Chovendo
 Condição de ativação: 15 dias após última execução / início da simulação Desativa: Após chover*/
 
 
+declare LifeMosquito extends Situation
+    scenary: Scenary @part
+    mosquito: Mosquito @part
+    houses: List @part
+end
+
+
+rule "vida mosquito"
+@role(situation)
+@type(LifeMosquito)
+    when
+        life: Mosquito(mosquito.days <= 28)
+    then
+        System.out.println("Muhahahaha");
+        SituationHelper.situationDetected(drools);
+end
 
 rule "mosquitoAptFly"
 when
         Scenary( $houses: scenary )
         $house: House() from $houses
-        $mosq: Mosquito(controlfly==false) from $house.getMosquitos()
 then
     	System.out.println("Pode voar");
 end

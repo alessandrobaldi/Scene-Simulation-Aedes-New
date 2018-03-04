@@ -16,6 +16,7 @@ import org.kie.api.runtime.KieSessionConfiguration;
 import org.kie.api.runtime.conf.ClockTypeOption;
 import org.kie.api.runtime.rule.FactHandle;
 
+
 /**
  * This is a sample class to launch a rule.
  */

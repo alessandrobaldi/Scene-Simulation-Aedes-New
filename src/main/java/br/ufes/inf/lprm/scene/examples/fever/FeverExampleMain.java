@@ -41,6 +41,7 @@ public class FeverExampleMain {
 
 			SceneApplication app = new SceneApplication(ClassPool.getDefault(), kSession, "Fever");
 
+                        
             final RuleEngineThread eng = new RuleEngineThread(kSession);
 			eng.start();
 
