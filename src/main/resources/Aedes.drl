@@ -1,0 +1,161 @@
+package br.ufes.inf.lprm.scene.examples.aedes;
+
+import java.util.List;
+
+import br.ufes.inf.lprm.scene.model.impl.Situation;
+import br.ufes.inf.lprm.scene.util.SituationHelper;
+import br.ufes.inf.lprm.situation.annotations.part;
+import br.ufes.inf.lprm.situation.model.events.*;
+import ca.study.scenary.entities.*;
+
+declare liveMosquito extends Situation
+	mosquito: Mosquito @part
+end
+
+declare houseAptLay extends Situation
+	house: House @part
+end
+
+declare MosquitoNotMoved extends Situation
+	house: House @part
+	mosquito: Mosquito @part
+end
+
+declare MosquitoNotLayed extends Situation
+	house: House @part
+	mosquito: Mosquito @part
+end
+
+declare lifeEggs extends Situation
+	house: House @part
+	eggs: Eggs @part
+end
+
+declare trapEggs extends Situation
+	house: House @part
+	eggs: Eggs @part
+end
+
+
+
+rule "lifeEggs"
+@role(situation)
+@type(lifeEggs)
+    when
+        house: House(activefocus==true)
+        eggs: Eggs() from house.getEggs()
+        Eggs() over window:time(20d)
+    then
+    SituationHelper.situationDetected(drools);
+end
+
+rule "trapEggs"
+@role(situation)
+@type(trapEggs)
+    when
+        house: House(trap==true)
+        eggs: Eggs() from house.getEggs()
+        Eggs() over window:time(4d)
+    then
+    SituationHelper.situationDetected(drools);
+end
+
+
+rule "houseAptLay"
+@role(situation)
+@type(houseAptLay)
+    when
+    	    house: House()
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "liveMosquito"
+@role(situation)
+@type(liveMosquito)
+    when
+    	    mosquito: Mosquito() over window:time(1m)
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "MosquitoNotMoved"
+@role(situation)
+@type(MosquitoNotMoved)
+    when
+     house: House()
+    	    mosquito: Mosquito(controlfly==false) from house.getMosquitos()
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "MosquitoNotLayed"
+@role(situation)
+@type(MosquitoNotLayed)
+    when
+     	house: House()
+        mosquito: Mosquito(controleggs==false) from house.getMosquitos()
+    then
+        SituationHelper.situationDetected(drools);
+end
+
+rule "moving"
+	when
+		$sit: liveMosquito($mosquito:mosquito)
+		$sit2: MosquitoNotMoved(house:house,mosquito == $mosquito)
+	then
+		house.changeMosquito($mosquito);
+		System.out.println("Mosquito has moved");
+		update(house)
+		update($mosquito)
+end
+
+rule "laying eggs"
+	when
+		$sit: liveMosquito($mosquito:mosquito)
+		$sit2: MosquitoNotLayed($house:house,mosquito == $mosquito)
+		$sit3: houseAptLay(house == $house)
+	then
+		$mosquito.setControleggs(true);
+        $house.addEggs();
+		System.out.println("Mosquito has layed eggs");
+		update($house)
+		update($mosquito)
+end
+
+rule "diying mosquito"
+	when
+		$sit: liveMosquito($mosquito: mosquito,active==false)
+	then
+		System.out.println("Mosquito has died");
+end
+
+rule "hatching eggs"
+	when
+		$house: House()
+		$eggs: Eggs() from $house.getEggs()
+		$sit: lifeEggs(eggs == $eggs, active==false)
+	then
+		$house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.addMosquito();
+        $house.removeEggs($eggs);
+		System.out.println("Eggs are hatched");
+end
+
+rule "calling agent"
+when
+		$house: House()
+		$eggs: Eggs() from $house.getEggs()
+		$sit: trapEggs(eggs == $eggs, active==false)
+	then
+		$house.callAgent();
+		System.out.println("Agent Called");
+end
