@@ -8,10 +8,6 @@ import br.ufes.inf.lprm.situation.annotations.part;
 import br.ufes.inf.lprm.situation.model.events.*;
 import ca.study.scenary.entities.*;
 
-declare liveMosquito extends Situation
-	mosquito: Mosquito @part
-end
-
 declare houseAptLay extends Situation
 	house: House @part
 end
@@ -35,8 +31,6 @@ declare trapEggs extends Situation
 	house: House @part
 	eggs: Eggs @part
 end
-
-
 
 rule "lifeEggs"
 @role(situation)
@@ -70,15 +64,6 @@ rule "houseAptLay"
         SituationHelper.situationDetected(drools);
 end
 
-rule "liveMosquito"
-@role(situation)
-@type(liveMosquito)
-    when
-    	    mosquito: Mosquito() over window:time(1m)
-    then
-        SituationHelper.situationDetected(drools);
-end
-
 rule "MosquitoNotMoved"
 @role(situation)
 @type(MosquitoNotMoved)
@@ -101,7 +86,6 @@ end
 
 rule "moving"
 	when
-		$sit: liveMosquito($mosquito:mosquito)
 		$sit2: MosquitoNotMoved(house:house,mosquito == $mosquito)
 	then
 		house.changeMosquito($mosquito);
@@ -112,7 +96,6 @@ end
 
 rule "laying eggs"
 	when
-		$sit: liveMosquito($mosquito:mosquito)
 		$sit2: MosquitoNotLayed($house:house,mosquito == $mosquito)
 		$sit3: houseAptLay(house == $house)
 	then
@@ -121,13 +104,6 @@ rule "laying eggs"
 		System.out.println("Mosquito has layed eggs");
 		update($house)
 		update($mosquito)
-end
-
-rule "diying mosquito"
-	when
-		$sit: liveMosquito($mosquito: mosquito,active==false)
-	then
-		System.out.println("Mosquito has died");
 end
 
 rule "hatching eggs"
